@@ -36,7 +36,7 @@
   	  <div class="form-group">
 	    <label class="col-sm-2 control-label">姓</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" placeholder="姓" name="fristName">
+	      <input type="text" class="form-control" placeholder="姓" name="firstName">
 	    </div>
 	  </div>
 	  
@@ -46,6 +46,13 @@
 	      <input type="text" class="form-control" placeholder="名字" name="lastName">
 	    </div>
 	  </div>
+	  
+	  <select class="form-control" name="groupId">
+	  	<c:forEach var="data" items="${groups }">
+		    <option value="${data.id }">${data.name }</option>
+	   	</c:forEach>
+		</select>
+	  
 	
 	  <div class="form-group">
 	    <div class="col-sm-offset-2 col-sm-10">

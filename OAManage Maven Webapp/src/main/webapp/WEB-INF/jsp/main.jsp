@@ -6,14 +6,6 @@
     <%@include file="/common.jsp"%>
     <title>OA后台系统管理</title>
      <link rel="StyleSheet" type="text/css" href="<%=basePath %>css/dashboard.css">
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
   </head>
   
   <body>
@@ -48,8 +40,8 @@
           <ul class="nav nav-sidebar">
             <li class="active"><a href="../activiti/list.do" target='ifram_c'>流程部署<span class="sr-only">(current)</span></a></li>
             <li><a href="../activiti/queryTask.do" target='ifram_c'>进行的任务</a></li>
-            <li><a href="../activiti/queryTask.do" target='ifram_c'>全部任务</a></li>
-            <li><a href="../activiti/modeler.do">Export</a></li>
+            <li><a href="../activiti/allTask.do" target='ifram_c'>全部任务</a></li>
+            <li><a href="../workflow/model/list.do" target='ifram_c'>Export</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="">Nav item</a></li>
@@ -59,8 +51,8 @@
             <li><a href="">More navigation</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="" target='ifram_c'>用户管理</a></li>
-            <li><a href="">One more nav</a></li>
+            <li><a href="../user/userList.do" target='ifram_c'>用户管理</a></li>
+            <li><a href="../user/groupList.do" target='ifram_c'>组管理</a></li>
             <li><a href="">Another nav item</a></li>
           </ul>
         </div>

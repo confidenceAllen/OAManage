@@ -29,7 +29,7 @@ ${tasks }
 		        <td>${datas.name }</td>
 		        <td>${datas.assignee }</td>
 		        <td><fmt:formatDate value='${datas.createTime }' pattern='yyyy-MM-dd HH:mm:ss'/></td>
-		        <td><a href="completeTask.do?taskId=${datas.id }">完成任务</a>&nbsp;
+		        <td><a href="startCompleteTask.do?taskId=${datas.id }&processInstanceId=${datas.processInstanceId }">完成任务</a>&nbsp;
 		        <a href="javascript:window.open('viewShowHight.do?taskId=${datas.id }&processDefinitionId=${datas.processDefinitionId}&processInstanceId=${datas.processInstanceId }')">查看流程图</a>&nbsp;
 		        </td>
 		      </tr>

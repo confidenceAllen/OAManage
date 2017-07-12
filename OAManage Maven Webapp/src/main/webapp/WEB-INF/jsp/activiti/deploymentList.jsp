@@ -25,7 +25,8 @@
 		        <td>${datas.name }</td>
 		        <td><fmt:formatDate value='${datas.deploymentTime }' pattern='yyyy-MM-dd HH:mm:ss'/></td>
 		        <td><a href="javascript:window.open('viewShow.do?deploymentId=${datas.id }')">查看流程图流程</a>&nbsp;
-		        <a href="processInstanceDetail.do?deploymentId=${datas.id }">开始请假流程</a></td>
+		        <a href="processInstanceDetail.do?deploymentId=${datas.id }">开始请假流程</a>
+		         <a href="deletedeployment.do?deploymentId=${datas.id }">删除部署流程</a></td>
 		      </tr>
     	</c:forEach>
     </tbody>

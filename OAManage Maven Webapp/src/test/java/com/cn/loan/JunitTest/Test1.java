@@ -10,6 +10,7 @@ import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngines;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.TaskService;
+import org.activiti.engine.form.FormProperty;
 import org.activiti.engine.history.HistoricActivityInstance;
 import org.activiti.engine.history.HistoricActivityInstanceQuery;
 import org.activiti.engine.history.HistoricProcessInstance;
@@ -17,6 +18,7 @@ import org.activiti.engine.history.HistoricProcessInstanceQuery;
 import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.history.HistoricTaskInstanceQuery;
 import org.activiti.engine.identity.User;
+import org.activiti.engine.impl.cmd.CreateUserCmd;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.DeploymentBuilder;
 import org.activiti.engine.repository.DeploymentQuery;
@@ -37,14 +39,39 @@ public class Test1 {
 	
      ProcessEngine processEngine=ProcessEngines.getDefaultProcessEngine();  
      
-	
+     @Test
+	public void ccc(){
+    	 Map<String, String> variables = new HashMap<String, String>();
+    	 variables.put("dates", "1");
+    	 processEngine.getFormService().submitStartFormData("请假:4:20004", variables);
+    	List<FormProperty> formProperties = processEngine.getFormService().getTaskFormData("17517").getFormProperties();
+    	for (FormProperty formProperty : formProperties) {
+			System.out.println(formProperty.getName()+"-----"+formProperty.getValue());
+		}
+	}
+     
+     
  	@Test
  	public void createUser(){
  		IdentityService inIdentityService = processEngine.getProcessEngineConfiguration().getIdentityService();
- 		User user = inIdentityService.newUser("2");
+ 		User user = inIdentityService.newUser("3");
  		user.setPassword("2");
  		user.setEmail("3");
  		inIdentityService.saveUser(user);
+ 		inIdentityService.setUserInfo(user.getId(), "phone", "123");
+ 	}
+ 	
+ 	@Test
+ 	public void cc(){
+ 		IdentityService identityService = processEngine.getProcessEngineConfiguration().getIdentityService();
+ 		List<User> users = identityService.createUserQuery().list();
+ 		for (User user : users) {
+			identityService.getUserInfo(user.getId(), "groupName");
+			List<String> list = identityService.getUserInfoKeys(user.getId());
+			for (String string : list) {
+				identityService.getUserInfo(user.getId(), "");
+			}
+		}
  	}
       
     /**部署流程定义*/  

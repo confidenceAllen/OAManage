@@ -1,0 +1,853 @@
+[DEBUG] [2017-07-10 09:20:15][org.springframework.core.env.StandardEnvironment]Adding [systemProperties] PropertySource with lowest search precedence
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.core.env.StandardEnvironment]Adding [systemEnvironment] PropertySource with lowest search precedence
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.core.env.StandardEnvironment]Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+ [INFO] [2017-07-10 09:20:15][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [activiti.cfg.xml]
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.beans.factory.xml.DefaultDocumentLoader]Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.beans.factory.xml.PluggableSchemaResolver]Loading schema mappings from [META-INF/spring.schemas]
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.beans.factory.xml.PluggableSchemaResolver]Loaded schema mappings: {http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://mybatis.org/schema/mybatis-spring-1.2.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd=org/springframework/jdbc/config/spring-jdbc-4.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://mybatis.org/schema/mybatis-spring.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-4.0.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-4.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-4.0.xsd=org/springframework/oxm/config/spring-oxm-4.0.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd=org/springframework/oxm/config/spring-oxm-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-4.0.xsd}
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.beans.factory.xml.PluggableSchemaResolver]Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-4.0.xsd
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader]Loading bean definitions
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'processEngineConfiguration'
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating instance of bean 'processEngineConfiguration'
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.beans.factory.support.DefaultListableBeanFactory]Eagerly caching bean 'processEngineConfiguration' to allow for resolving potential circular references
+ [DEBUG] [2017-07-10 09:20:15][org.springframework.beans.factory.support.DefaultListableBeanFactory]Finished creating instance of bean 'processEngineConfiguration'
+ [DEBUG] [2017-07-10 09:20:15][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]initializing datasource to db: jdbc:mysql://localhost:3306/activiti1?useUnicode=true&characterEncoding=utf8
+ [DEBUG] [2017-07-10 09:20:15][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+ [DEBUG] [2017-07-10 09:20:15][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+ [DEBUG] [2017-07-10 09:20:16][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1558079303.
+ [DEBUG] [2017-07-10 09:20:16][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]database product name: 'MySQL'
+ [DEBUG] [2017-07-10 09:20:16][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]using database type: mysql
+ [DEBUG] [2017-07-10 09:20:16][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1558079303 to pool.
+ [DEBUG] [2017-07-10 09:20:17][org.activiti.engine.impl.interceptor.LogInterceptor]
+
+ [DEBUG] [2017-07-10 09:20:17][org.activiti.engine.impl.interceptor.LogInterceptor]--- starting SchemaOperationsProcessEngineBuild --------------------------------------------------------
+ [DEBUG] [2017-07-10 09:20:17][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+ [DEBUG] [2017-07-10 09:20:17][org.apache.ibatis.datasource.pooled.PooledDataSource]Checked out connection 1558079303 from pool.
+ [DEBUG] [2017-07-10 09:20:17][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5cde6747]
+ [INFO] [2017-07-10 09:20:17][org.activiti.engine.impl.db.DbSqlSession]performing create on engine with resource org/activiti/db/create/activiti.mysql.create.engine.sql
+ [INFO] [2017-07-10 09:20:17][org.activiti.engine.impl.db.DbSqlSession]Found MySQL: majorVersion=5 minorVersion=7
+ [DEBUG] [2017-07-10 09:20:17][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_GE_PROPERTY ( 
+NAME_ varchar(64), 
+VALUE_ varchar(300), 
+REV_ integer, 
+primary key (NAME_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:17][org.activiti.engine.impl.db.DbSqlSession]SQL: insert into ACT_GE_PROPERTY 
+values ('schema.version', '5.17.0.2', 1)
+ [DEBUG] [2017-07-10 09:20:17][org.activiti.engine.impl.db.DbSqlSession]SQL: insert into ACT_GE_PROPERTY 
+values ('schema.history', 'create(5.17.0.2)', 1)
+ [DEBUG] [2017-07-10 09:20:17][org.activiti.engine.impl.db.DbSqlSession]SQL: insert into ACT_GE_PROPERTY 
+values ('next.dbid', '1', 1)
+ [DEBUG] [2017-07-10 09:20:17][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_GE_BYTEARRAY ( 
+ID_ varchar(64), 
+REV_ integer, 
+NAME_ varchar(255), 
+DEPLOYMENT_ID_ varchar(64), 
+BYTES_ LONGBLOB, 
+GENERATED_ TINYINT, 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:18][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_RE_DEPLOYMENT ( 
+ID_ varchar(64), 
+NAME_ varchar(255), 
+CATEGORY_ varchar(255), 
+TENANT_ID_ varchar(255) default '', 
+DEPLOY_TIME_ timestamp(3), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:18][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_RE_MODEL ( 
+ID_ varchar(64) not null, 
+REV_ integer, 
+NAME_ varchar(255), 
+KEY_ varchar(255), 
+CATEGORY_ varchar(255), 
+CREATE_TIME_ timestamp(3) null, 
+LAST_UPDATE_TIME_ timestamp(3) null, 
+VERSION_ integer, 
+META_INFO_ varchar(4000), 
+DEPLOYMENT_ID_ varchar(64), 
+EDITOR_SOURCE_VALUE_ID_ varchar(64), 
+EDITOR_SOURCE_EXTRA_VALUE_ID_ varchar(64), 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:18][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_RU_EXECUTION ( 
+ID_ varchar(64), 
+REV_ integer, 
+PROC_INST_ID_ varchar(64), 
+BUSINESS_KEY_ varchar(255), 
+PARENT_ID_ varchar(64), 
+PROC_DEF_ID_ varchar(64), 
+SUPER_EXEC_ varchar(64), 
+ACT_ID_ varchar(255), 
+IS_ACTIVE_ TINYINT, 
+IS_CONCURRENT_ TINYINT, 
+IS_SCOPE_ TINYINT, 
+IS_EVENT_SCOPE_ TINYINT, 
+SUSPENSION_STATE_ integer, 
+CACHED_ENT_STATE_ integer, 
+TENANT_ID_ varchar(255) default '', 
+NAME_ varchar(255), 
+LOCK_TIME_ timestamp(3) NULL, 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:19][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_RU_JOB ( 
+ID_ varchar(64) NOT NULL, 
+REV_ integer, 
+TYPE_ varchar(255) NOT NULL, 
+LOCK_EXP_TIME_ timestamp(3) NULL, 
+LOCK_OWNER_ varchar(255), 
+EXCLUSIVE_ boolean, 
+EXECUTION_ID_ varchar(64), 
+PROCESS_INSTANCE_ID_ varchar(64), 
+PROC_DEF_ID_ varchar(64), 
+RETRIES_ integer, 
+EXCEPTION_STACK_ID_ varchar(64), 
+EXCEPTION_MSG_ varchar(4000), 
+DUEDATE_ timestamp(3) NULL, 
+REPEAT_ varchar(255), 
+HANDLER_TYPE_ varchar(255), 
+HANDLER_CFG_ varchar(4000), 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:19][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_RE_PROCDEF ( 
+ID_ varchar(64) not null, 
+REV_ integer, 
+CATEGORY_ varchar(255), 
+NAME_ varchar(255), 
+KEY_ varchar(255) not null, 
+VERSION_ integer not null, 
+DEPLOYMENT_ID_ varchar(64), 
+RESOURCE_NAME_ varchar(4000), 
+DGRM_RESOURCE_NAME_ varchar(4000), 
+DESCRIPTION_ varchar(4000), 
+HAS_START_FORM_KEY_ TINYINT, 
+HAS_GRAPHICAL_NOTATION_ TINYINT, 
+SUSPENSION_STATE_ integer, 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:19][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_RU_TASK ( 
+ID_ varchar(64), 
+REV_ integer, 
+EXECUTION_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+PROC_DEF_ID_ varchar(64), 
+NAME_ varchar(255), 
+PARENT_TASK_ID_ varchar(64), 
+DESCRIPTION_ varchar(4000), 
+TASK_DEF_KEY_ varchar(255), 
+OWNER_ varchar(255), 
+ASSIGNEE_ varchar(255), 
+DELEGATION_ varchar(64), 
+PRIORITY_ integer, 
+CREATE_TIME_ timestamp(3), 
+DUE_DATE_ datetime(3), 
+CATEGORY_ varchar(255), 
+SUSPENSION_STATE_ integer, 
+TENANT_ID_ varchar(255) default '', 
+FORM_KEY_ varchar(255), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:20][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_RU_IDENTITYLINK ( 
+ID_ varchar(64), 
+REV_ integer, 
+GROUP_ID_ varchar(255), 
+TYPE_ varchar(255), 
+USER_ID_ varchar(255), 
+TASK_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+PROC_DEF_ID_ varchar(64), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:20][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_RU_VARIABLE ( 
+ID_ varchar(64) not null, 
+REV_ integer, 
+TYPE_ varchar(255) not null, 
+NAME_ varchar(255) not null, 
+EXECUTION_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+TASK_ID_ varchar(64), 
+BYTEARRAY_ID_ varchar(64), 
+DOUBLE_ double, 
+LONG_ bigint, 
+TEXT_ varchar(4000), 
+TEXT2_ varchar(4000), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:20][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_RU_EVENT_SUBSCR ( 
+ID_ varchar(64) not null, 
+REV_ integer, 
+EVENT_TYPE_ varchar(255) not null, 
+EVENT_NAME_ varchar(255), 
+EXECUTION_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+ACTIVITY_ID_ varchar(64), 
+CONFIGURATION_ varchar(255), 
+CREATED_ timestamp(3) not null DEFAULT CURRENT_TIMESTAMP(3), 
+PROC_DEF_ID_ varchar(64), 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:21][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_EVT_LOG ( 
+LOG_NR_ bigint auto_increment, 
+TYPE_ varchar(64), 
+PROC_DEF_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+EXECUTION_ID_ varchar(64), 
+TASK_ID_ varchar(64), 
+TIME_STAMP_ timestamp(3) not null, 
+USER_ID_ varchar(255), 
+DATA_ LONGBLOB, 
+LOCK_OWNER_ varchar(255), 
+LOCK_TIME_ timestamp(3) null, 
+IS_PROCESSED_ tinyint default 0, 
+primary key (LOG_NR_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:21][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_EXEC_BUSKEY on ACT_RU_EXECUTION(BUSINESS_KEY_)
+ [DEBUG] [2017-07-10 09:20:22][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_TASK_CREATE on ACT_RU_TASK(CREATE_TIME_)
+ [DEBUG] [2017-07-10 09:20:22][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_IDENT_LNK_USER on ACT_RU_IDENTITYLINK(USER_ID_)
+ [DEBUG] [2017-07-10 09:20:22][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_IDENT_LNK_GROUP on ACT_RU_IDENTITYLINK(GROUP_ID_)
+ [DEBUG] [2017-07-10 09:20:22][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_EVENT_SUBSCR_CONFIG_ on ACT_RU_EVENT_SUBSCR(CONFIGURATION_)
+ [DEBUG] [2017-07-10 09:20:23][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_VARIABLE_TASK_ID on ACT_RU_VARIABLE(TASK_ID_)
+ [DEBUG] [2017-07-10 09:20:23][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_ATHRZ_PROCEDEF on ACT_RU_IDENTITYLINK(PROC_DEF_ID_)
+ [DEBUG] [2017-07-10 09:20:23][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_GE_BYTEARRAY 
+add constraint ACT_FK_BYTEARR_DEPL 
+foreign key (DEPLOYMENT_ID_) 
+references ACT_RE_DEPLOYMENT (ID_)
+ [DEBUG] [2017-07-10 09:20:24][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RE_PROCDEF 
+add constraint ACT_UNIQ_PROCDEF 
+unique (KEY_,VERSION_, TENANT_ID_)
+ [DEBUG] [2017-07-10 09:20:24][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_EXECUTION 
+add constraint ACT_FK_EXE_PROCINST 
+foreign key (PROC_INST_ID_) 
+references ACT_RU_EXECUTION (ID_) on delete cascade on update cascade
+ [DEBUG] [2017-07-10 09:20:24][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_EXECUTION 
+add constraint ACT_FK_EXE_PARENT 
+foreign key (PARENT_ID_) 
+references ACT_RU_EXECUTION (ID_)
+ [DEBUG] [2017-07-10 09:20:25][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_EXECUTION 
+add constraint ACT_FK_EXE_SUPER 
+foreign key (SUPER_EXEC_) 
+references ACT_RU_EXECUTION (ID_)
+ [DEBUG] [2017-07-10 09:20:26][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_EXECUTION 
+add constraint ACT_FK_EXE_PROCDEF 
+foreign key (PROC_DEF_ID_) 
+references ACT_RE_PROCDEF (ID_)
+ [DEBUG] [2017-07-10 09:20:26][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_IDENTITYLINK 
+add constraint ACT_FK_TSKASS_TASK 
+foreign key (TASK_ID_) 
+references ACT_RU_TASK (ID_)
+ [DEBUG] [2017-07-10 09:20:27][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_IDENTITYLINK 
+add constraint ACT_FK_ATHRZ_PROCEDEF 
+foreign key (PROC_DEF_ID_) 
+references ACT_RE_PROCDEF(ID_)
+ [DEBUG] [2017-07-10 09:20:27][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_IDENTITYLINK 
+add constraint ACT_FK_IDL_PROCINST 
+foreign key (PROC_INST_ID_) 
+references ACT_RU_EXECUTION (ID_)
+ [DEBUG] [2017-07-10 09:20:28][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_TASK 
+add constraint ACT_FK_TASK_EXE 
+foreign key (EXECUTION_ID_) 
+references ACT_RU_EXECUTION (ID_)
+ [DEBUG] [2017-07-10 09:20:29][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_TASK 
+add constraint ACT_FK_TASK_PROCINST 
+foreign key (PROC_INST_ID_) 
+references ACT_RU_EXECUTION (ID_)
+ [DEBUG] [2017-07-10 09:20:29][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_TASK 
+add constraint ACT_FK_TASK_PROCDEF 
+foreign key (PROC_DEF_ID_) 
+references ACT_RE_PROCDEF (ID_)
+ [DEBUG] [2017-07-10 09:20:30][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_VARIABLE 
+add constraint ACT_FK_VAR_EXE 
+foreign key (EXECUTION_ID_) 
+references ACT_RU_EXECUTION (ID_)
+ [DEBUG] [2017-07-10 09:20:31][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_VARIABLE 
+add constraint ACT_FK_VAR_PROCINST 
+foreign key (PROC_INST_ID_) 
+references ACT_RU_EXECUTION(ID_)
+ [DEBUG] [2017-07-10 09:20:31][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_VARIABLE 
+add constraint ACT_FK_VAR_BYTEARRAY 
+foreign key (BYTEARRAY_ID_) 
+references ACT_GE_BYTEARRAY (ID_)
+ [DEBUG] [2017-07-10 09:20:32][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_JOB 
+add constraint ACT_FK_JOB_EXCEPTION 
+foreign key (EXCEPTION_STACK_ID_) 
+references ACT_GE_BYTEARRAY (ID_)
+ [DEBUG] [2017-07-10 09:20:32][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RU_EVENT_SUBSCR 
+add constraint ACT_FK_EVENT_EXEC 
+foreign key (EXECUTION_ID_) 
+references ACT_RU_EXECUTION(ID_)
+ [DEBUG] [2017-07-10 09:20:33][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RE_MODEL 
+add constraint ACT_FK_MODEL_SOURCE 
+foreign key (EDITOR_SOURCE_VALUE_ID_) 
+references ACT_GE_BYTEARRAY (ID_)
+ [DEBUG] [2017-07-10 09:20:33][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RE_MODEL 
+add constraint ACT_FK_MODEL_SOURCE_EXTRA 
+foreign key (EDITOR_SOURCE_EXTRA_VALUE_ID_) 
+references ACT_GE_BYTEARRAY (ID_)
+ [DEBUG] [2017-07-10 09:20:34][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_RE_MODEL 
+add constraint ACT_FK_MODEL_DEPLOYMENT 
+foreign key (DEPLOYMENT_ID_) 
+references ACT_RE_DEPLOYMENT (ID_)
+ [DEBUG] [2017-07-10 09:20:34][org.activiti.engine.impl.db.DbSqlSession]activiti db schema create for component engine successful
+ [INFO] [2017-07-10 09:20:34][org.activiti.engine.impl.db.DbSqlSession]performing create on history with resource org/activiti/db/create/activiti.mysql.create.history.sql
+ [INFO] [2017-07-10 09:20:34][org.activiti.engine.impl.db.DbSqlSession]Found MySQL: majorVersion=5 minorVersion=7
+ [DEBUG] [2017-07-10 09:20:34][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_HI_PROCINST ( 
+ID_ varchar(64) not null, 
+PROC_INST_ID_ varchar(64) not null, 
+BUSINESS_KEY_ varchar(255), 
+PROC_DEF_ID_ varchar(64) not null, 
+START_TIME_ datetime(3) not null, 
+END_TIME_ datetime(3), 
+DURATION_ bigint, 
+START_USER_ID_ varchar(255), 
+START_ACT_ID_ varchar(255), 
+END_ACT_ID_ varchar(255), 
+SUPER_PROCESS_INSTANCE_ID_ varchar(64), 
+DELETE_REASON_ varchar(4000), 
+TENANT_ID_ varchar(255) default '', 
+NAME_ varchar(255), 
+primary key (ID_), 
+unique (PROC_INST_ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:34][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_HI_ACTINST ( 
+ID_ varchar(64) not null, 
+PROC_DEF_ID_ varchar(64) not null, 
+PROC_INST_ID_ varchar(64) not null, 
+EXECUTION_ID_ varchar(64) not null, 
+ACT_ID_ varchar(255) not null, 
+TASK_ID_ varchar(64), 
+CALL_PROC_INST_ID_ varchar(64), 
+ACT_NAME_ varchar(255), 
+ACT_TYPE_ varchar(255) not null, 
+ASSIGNEE_ varchar(255), 
+START_TIME_ datetime(3) not null, 
+END_TIME_ datetime(3), 
+DURATION_ bigint, 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:35][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_HI_TASKINST ( 
+ID_ varchar(64) not null, 
+PROC_DEF_ID_ varchar(64), 
+TASK_DEF_KEY_ varchar(255), 
+PROC_INST_ID_ varchar(64), 
+EXECUTION_ID_ varchar(64), 
+NAME_ varchar(255), 
+PARENT_TASK_ID_ varchar(64), 
+DESCRIPTION_ varchar(4000), 
+OWNER_ varchar(255), 
+ASSIGNEE_ varchar(255), 
+START_TIME_ datetime(3) not null, 
+CLAIM_TIME_ datetime(3), 
+END_TIME_ datetime(3), 
+DURATION_ bigint, 
+DELETE_REASON_ varchar(4000), 
+PRIORITY_ integer, 
+DUE_DATE_ datetime(3), 
+FORM_KEY_ varchar(255), 
+CATEGORY_ varchar(255), 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:35][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_HI_VARINST ( 
+ID_ varchar(64) not null, 
+PROC_INST_ID_ varchar(64), 
+EXECUTION_ID_ varchar(64), 
+TASK_ID_ varchar(64), 
+NAME_ varchar(255) not null, 
+VAR_TYPE_ varchar(100), 
+REV_ integer, 
+BYTEARRAY_ID_ varchar(64), 
+DOUBLE_ double, 
+LONG_ bigint, 
+TEXT_ varchar(4000), 
+TEXT2_ varchar(4000), 
+CREATE_TIME_ datetime(3), 
+LAST_UPDATED_TIME_ datetime(3), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:35][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_HI_DETAIL ( 
+ID_ varchar(64) not null, 
+TYPE_ varchar(255) not null, 
+PROC_INST_ID_ varchar(64), 
+EXECUTION_ID_ varchar(64), 
+TASK_ID_ varchar(64), 
+ACT_INST_ID_ varchar(64), 
+NAME_ varchar(255) not null, 
+VAR_TYPE_ varchar(255), 
+REV_ integer, 
+TIME_ datetime(3) not null, 
+BYTEARRAY_ID_ varchar(64), 
+DOUBLE_ double, 
+LONG_ bigint, 
+TEXT_ varchar(4000), 
+TEXT2_ varchar(4000), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:35][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_HI_COMMENT ( 
+ID_ varchar(64) not null, 
+TYPE_ varchar(255), 
+TIME_ datetime(3) not null, 
+USER_ID_ varchar(255), 
+TASK_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+ACTION_ varchar(255), 
+MESSAGE_ varchar(4000), 
+FULL_MSG_ LONGBLOB, 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:36][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_HI_ATTACHMENT ( 
+ID_ varchar(64) not null, 
+REV_ integer, 
+USER_ID_ varchar(255), 
+NAME_ varchar(255), 
+DESCRIPTION_ varchar(4000), 
+TYPE_ varchar(255), 
+TASK_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+URL_ varchar(4000), 
+CONTENT_ID_ varchar(64), 
+TIME_ datetime(3), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:36][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_HI_IDENTITYLINK ( 
+ID_ varchar(64), 
+GROUP_ID_ varchar(255), 
+TYPE_ varchar(255), 
+USER_ID_ varchar(255), 
+TASK_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:36][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_PRO_INST_END on ACT_HI_PROCINST(END_TIME_)
+ [DEBUG] [2017-07-10 09:20:36][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_PRO_I_BUSKEY on ACT_HI_PROCINST(BUSINESS_KEY_)
+ [DEBUG] [2017-07-10 09:20:36][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_ACT_INST_START on ACT_HI_ACTINST(START_TIME_)
+ [DEBUG] [2017-07-10 09:20:36][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_ACT_INST_END on ACT_HI_ACTINST(END_TIME_)
+ [DEBUG] [2017-07-10 09:20:37][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_DETAIL_PROC_INST on ACT_HI_DETAIL(PROC_INST_ID_)
+ [DEBUG] [2017-07-10 09:20:37][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_DETAIL_ACT_INST on ACT_HI_DETAIL(ACT_INST_ID_)
+ [DEBUG] [2017-07-10 09:20:37][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_DETAIL_TIME on ACT_HI_DETAIL(TIME_)
+ [DEBUG] [2017-07-10 09:20:38][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_DETAIL_NAME on ACT_HI_DETAIL(NAME_)
+ [DEBUG] [2017-07-10 09:20:38][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_DETAIL_TASK_ID on ACT_HI_DETAIL(TASK_ID_)
+ [DEBUG] [2017-07-10 09:20:38][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_PROCVAR_PROC_INST on ACT_HI_VARINST(PROC_INST_ID_)
+ [DEBUG] [2017-07-10 09:20:38][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_PROCVAR_NAME_TYPE on ACT_HI_VARINST(NAME_, VAR_TYPE_)
+ [DEBUG] [2017-07-10 09:20:38][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_PROCVAR_TASK_ID on ACT_HI_VARINST(TASK_ID_)
+ [DEBUG] [2017-07-10 09:20:39][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_ACT_INST_PROCINST on ACT_HI_ACTINST(PROC_INST_ID_, ACT_ID_)
+ [DEBUG] [2017-07-10 09:20:39][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_ACT_INST_EXEC on ACT_HI_ACTINST(EXECUTION_ID_, ACT_ID_)
+ [DEBUG] [2017-07-10 09:20:39][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_IDENT_LNK_USER on ACT_HI_IDENTITYLINK(USER_ID_)
+ [DEBUG] [2017-07-10 09:20:39][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_IDENT_LNK_TASK on ACT_HI_IDENTITYLINK(TASK_ID_)
+ [DEBUG] [2017-07-10 09:20:39][org.activiti.engine.impl.db.DbSqlSession]SQL: create index ACT_IDX_HI_IDENT_LNK_PROCINST on ACT_HI_IDENTITYLINK(PROC_INST_ID_)
+ [DEBUG] [2017-07-10 09:20:39][org.activiti.engine.impl.db.DbSqlSession]activiti db schema create for component history successful
+ [INFO] [2017-07-10 09:20:39][org.activiti.engine.impl.db.DbSqlSession]performing create on identity with resource org/activiti/db/create/activiti.mysql.create.identity.sql
+ [INFO] [2017-07-10 09:20:39][org.activiti.engine.impl.db.DbSqlSession]Found MySQL: majorVersion=5 minorVersion=7
+ [DEBUG] [2017-07-10 09:20:39][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_ID_GROUP ( 
+ID_ varchar(64), 
+REV_ integer, 
+NAME_ varchar(255), 
+TYPE_ varchar(255), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:40][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_ID_MEMBERSHIP ( 
+USER_ID_ varchar(64), 
+GROUP_ID_ varchar(64), 
+primary key (USER_ID_, GROUP_ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:40][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_ID_USER ( 
+ID_ varchar(64), 
+REV_ integer, 
+FIRST_ varchar(255), 
+LAST_ varchar(255), 
+EMAIL_ varchar(255), 
+PWD_ varchar(255), 
+PICTURE_ID_ varchar(64), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:40][org.activiti.engine.impl.db.DbSqlSession]SQL: create table ACT_ID_INFO ( 
+ID_ varchar(64), 
+REV_ integer, 
+USER_ID_ varchar(64), 
+TYPE_ varchar(64), 
+KEY_ varchar(255), 
+VALUE_ varchar(255), 
+PASSWORD_ LONGBLOB, 
+PARENT_ID_ varchar(255), 
+primary key (ID_) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_bin
+ [DEBUG] [2017-07-10 09:20:40][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_ID_MEMBERSHIP 
+add constraint ACT_FK_MEMB_GROUP 
+foreign key (GROUP_ID_) 
+references ACT_ID_GROUP (ID_)
+ [DEBUG] [2017-07-10 09:20:41][org.activiti.engine.impl.db.DbSqlSession]SQL: alter table ACT_ID_MEMBERSHIP 
+add constraint ACT_FK_MEMB_USER 
+foreign key (USER_ID_) 
+references ACT_ID_USER (ID_)
+ [DEBUG] [2017-07-10 09:20:41][org.activiti.engine.impl.db.DbSqlSession]activiti db schema create for component identity successful
+ [DEBUG] [2017-07-10 09:20:41][org.activiti.engine.impl.db.DbSqlSession]flush summary: 0 insert, 0 update, 0 delete.
+ [DEBUG] [2017-07-10 09:20:41][org.activiti.engine.impl.db.DbSqlSession]now executing flush...
+ [DEBUG] [2017-07-10 09:20:41][org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext]firing event committing...
+ [DEBUG] [2017-07-10 09:20:41][org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext]committing the ibatis sql session...
+ [DEBUG] [2017-07-10 09:20:41][org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext]firing event committed...
+ [DEBUG] [2017-07-10 09:20:41][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@5cde6747]
+ [DEBUG] [2017-07-10 09:20:41][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@5cde6747]
+ [DEBUG] [2017-07-10 09:20:41][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1558079303 to pool.
+ [DEBUG] [2017-07-10 09:20:41][org.activiti.engine.impl.interceptor.LogInterceptor]--- SchemaOperationsProcessEngineBuild finished --------------------------------------------------------
+ [DEBUG] [2017-07-10 09:20:41][org.activiti.engine.impl.interceptor.LogInterceptor]
+
+ [INFO] [2017-07-10 09:20:41][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-10 17:35:07][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [activiti.cfg.xml]
+ [INFO] [2017-07-10 17:35:09][org.activiti.engine.impl.db.DbSqlSession]performing create on engine with resource org/activiti/db/create/activiti.mysql.create.engine.sql
+ [INFO] [2017-07-10 17:35:09][org.activiti.engine.impl.db.DbSqlSession]Found MySQL: majorVersion=5 minorVersion=7
+ [INFO] [2017-07-10 17:35:25][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [activiti.cfg.xml]
+ [INFO] [2017-07-10 17:35:26][org.activiti.engine.impl.db.DbSqlSession]performing create on history with resource org/activiti/db/create/activiti.mysql.create.history.sql
+ [INFO] [2017-07-10 17:35:26][org.activiti.engine.impl.db.DbSqlSession]Found MySQL: majorVersion=5 minorVersion=7
+ [INFO] [2017-07-10 17:35:27][org.activiti.engine.impl.db.DbSqlSession]performing create on identity with resource org/activiti/db/create/activiti.mysql.create.identity.sql
+ [INFO] [2017-07-10 17:35:27][org.activiti.engine.impl.db.DbSqlSession]Found MySQL: majorVersion=5 minorVersion=7
+ [INFO] [2017-07-10 17:35:30][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-10 17:35:32][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-10 18:19:18][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-10 18:19:18][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-10 18:19:18][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-10 18:19:20][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-10 18:19:20][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-10 18:20:09][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-10 18:20:09][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-10 18:20:09][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-10 18:20:11][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-10 18:20:11][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-10 18:20:53][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-10 18:20:53][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-10 18:20:53][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-10 18:20:56][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-10 18:20:56][org.activiti.engine.ProcessEngines]initialised process engine default
+ [ERROR] [2017-07-10 18:20:56][org.activiti.engine.impl.interceptor.CommandContext]Error while closing command context
+ org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+### The error may involve org.activiti.engine.impl.persistence.entity.UserEntity.insertUser-Inline
+### The error occurred while setting parameters
+### SQL: insert into ACT_ID_USER (ID_, REV_, FIRST_, LAST_, EMAIL_, PWD_)     values (       ?,       1,       ?,       ?,       ?,       ?     )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at org.activiti.engine.impl.db.DbSqlSession.flushRegularInsert(DbSqlSession.java:830)
+	at org.activiti.engine.impl.db.DbSqlSession.flushPersistentObjects(DbSqlSession.java:811)
+	at org.activiti.engine.impl.db.DbSqlSession.flushInserts(DbSqlSession.java:794)
+	at org.activiti.engine.impl.db.DbSqlSession.flush(DbSqlSession.java:615)
+	at org.activiti.engine.impl.interceptor.CommandContext.flushSessions(CommandContext.java:212)
+	at org.activiti.engine.impl.interceptor.CommandContext.close(CommandContext.java:138)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:66)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:31)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.IdentityServiceImpl.saveUser(IdentityServiceImpl.java:65)
+	at com.cn.loan.JunitTest.Test1.createUser(Test1.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1039)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4232)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4164)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2838)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1307)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	... 36 more
+[INFO] [2017-07-10 18:21:13][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-10 18:21:13][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-10 18:21:14][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-10 18:21:16][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-10 18:21:16][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 09:58:20][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 09:58:20][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 09:58:20][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 09:58:24][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 09:58:24][org.activiti.engine.ProcessEngines]initialised process engine default
+ [ERROR] [2017-07-11 09:58:24][org.activiti.engine.impl.interceptor.CommandContext]Error while closing command context
+ org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Query was empty
+### The error may exist in org/activiti/db/mapping/entity/User.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.UserEntity.selectUserByNativeQuery-Inline
+### The error occurred while setting parameters
+### SQL: 
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Query was empty
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:440)
+	at org.activiti.engine.impl.persistence.entity.UserEntityManager.findUsersByNativeQuery(UserEntityManager.java:143)
+	at org.activiti.engine.impl.NativeUserQueryImpl.executeList(NativeUserQueryImpl.java:29)
+	at org.activiti.engine.impl.AbstractNativeQuery.execute(AbstractNativeQuery.java:117)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:31)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.AbstractNativeQuery.list(AbstractNativeQuery.java:91)
+	at com.cn.loan.JunitTest.Test1.cc(Test1.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Query was empty
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4232)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4164)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2838)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1307)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:60)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 35 more
+[INFO] [2017-07-11 09:58:40][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 09:58:40][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 09:58:41][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 09:58:43][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 09:58:43][org.activiti.engine.ProcessEngines]initialised process engine default
+ [ERROR] [2017-07-11 09:58:43][org.activiti.engine.impl.interceptor.CommandContext]Error while closing command context
+ org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Query was empty
+### The error may exist in org/activiti/db/mapping/entity/User.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.UserEntity.selectUserByNativeQuery-Inline
+### The error occurred while setting parameters
+### SQL: 
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Query was empty
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:440)
+	at org.activiti.engine.impl.persistence.entity.UserEntityManager.findUsersByNativeQuery(UserEntityManager.java:143)
+	at org.activiti.engine.impl.NativeUserQueryImpl.executeList(NativeUserQueryImpl.java:29)
+	at org.activiti.engine.impl.AbstractNativeQuery.execute(AbstractNativeQuery.java:117)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:31)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.AbstractNativeQuery.list(AbstractNativeQuery.java:91)
+	at com.cn.loan.JunitTest.Test1.cc(Test1.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Query was empty
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4232)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4164)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2838)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1307)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:60)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 35 more
+[INFO] [2017-07-11 09:59:09][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 09:59:09][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 09:59:09][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 09:59:11][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 09:59:11][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 14:11:23][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 14:11:23][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 14:11:24][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 14:11:26][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 14:11:26][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 14:11:39][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 14:11:39][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 14:11:39][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 14:11:42][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 14:11:42][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 14:11:55][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 14:11:55][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 14:11:55][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 14:11:58][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 14:11:58][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 14:12:37][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 14:12:37][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 14:12:37][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 14:12:40][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 14:12:40][org.activiti.engine.ProcessEngines]initialised process engine default
+ [ERROR] [2017-07-11 14:12:44][org.activiti.engine.impl.interceptor.CommandContext]Error while closing command context
+ org.activiti.engine.ActivitiObjectNotFoundException: no deployed process definition found with id '12501'
+	at org.activiti.engine.impl.persistence.deploy.DeploymentManager.findDeployedProcessDefinitionById(DeploymentManager.java:75)
+	at org.activiti.engine.impl.cmd.GetFormKeyCmd.execute(GetFormKeyCmd.java:63)
+	at org.activiti.engine.impl.cmd.GetFormKeyCmd.execute(GetFormKeyCmd.java:29)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:31)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.FormServiceImpl.getStartFormKey(FormServiceImpl.java:74)
+	at com.cn.loan.util.Test1.FormServiceTest(Test1.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+[INFO] [2017-07-11 14:13:27][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 14:13:27][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 14:13:27][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 14:13:29][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 14:13:29][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 14:13:32][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.请假.png
+ [INFO] [2017-07-11 14:13:32][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.bpmn20.xml
+ [INFO] [2017-07-11 14:15:47][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 14:15:47][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 14:15:48][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 14:15:50][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 14:15:50][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 14:15:52][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.请假.png
+ [INFO] [2017-07-11 14:15:52][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.bpmn20.xml
+ [INFO] [2017-07-11 14:17:06][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 14:17:06][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 14:17:06][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 14:17:09][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 14:17:09][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 14:17:09][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.请假.png
+ [INFO] [2017-07-11 14:17:09][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.bpmn20.xml
+ [INFO] [2017-07-11 14:36:39][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 14:36:39][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 14:36:39][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 14:36:42][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 14:36:42][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 14:36:42][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.请假.png
+ [INFO] [2017-07-11 14:36:42][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.bpmn20.xml
+ [INFO] [2017-07-11 14:39:33][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 14:39:33][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 14:39:33][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 14:39:35][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 14:39:35][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 14:39:35][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.请假.png
+ [INFO] [2017-07-11 14:39:35][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.bpmn20.xml
+ [INFO] [2017-07-11 15:49:46][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 15:49:46][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 15:49:46][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 15:49:48][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 15:49:48][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 15:49:49][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.请假.png
+ [INFO] [2017-07-11 15:49:49][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.bpmn20.xml
+ [INFO] [2017-07-11 16:06:25][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-11 16:06:25][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-11 16:06:25][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-11 16:06:27][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-11 16:06:27][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-11 16:06:27][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.请假.png
+ [INFO] [2017-07-11 16:06:27][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.bpmn20.xml
+ 

@@ -6,30 +6,30 @@
 <h1 class="page-header">请假信息</h1>
 <h2 class="sub-header">Section title</h2>
 
-<form action="startProcessInstance.do" method="post">
-
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon2">KEY</span>
-  <input type="text" class="form-control" placeholder="请输入姓名" aria-describedby="sizing-addon2" name="processDefinitionKey" value="${processDefinition.key }">
+<div class="row">
+	<div class="col-md-9" role="main">  
+		<form action="startProcessInstance.do" method="post">
+		
+		 	<div class="form-group">
+		    	<label  class="col-sm-2 control-label">KEY</label>
+			     <div class="col-sm-10">
+			      <input type="text" class="form-control" name="processDefinitionId" value="${processDefinition.id }">
+			    </div>
+	  		</div>	
+	  		
+			<c:forEach var="data" items="${formPropertielList }" varStatus="varStatus">
+				 <div class="form-group">
+			    	<label  class="col-sm-2 control-label">${data.name }</label>
+				     <div class="col-sm-10">
+				      <input type="text" class="form-control" placeholder="${data.name }" name="${data.id }">
+				    </div>
+		  		</div>		
+			</c:forEach>
+		 
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
 </div>
-
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon2">请假人</span>
-  <input type="text" class="form-control" placeholder="请输入姓名" aria-describedby="sizing-addon2" name="username">
-</div>
-
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon2">请假天数</span>
-  <input type="text" class="form-control" placeholder="请输入天数" aria-describedby="sizing-addon2" name="dates">
-</div>
-
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon2">请假原因</span>
-  <input type="text" class="form-control" placeholder="请输入原因" aria-describedby="sizing-addon2" name="reason">
-</div>
-
-<button class="btn btn-default" type="submit">确认</button>
-</form>
 
 </body>
 </html>

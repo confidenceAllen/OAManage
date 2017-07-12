@@ -1,8 +1,12 @@
 package com.cn.loan.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.activiti.engine.IdentityService;
+import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +23,9 @@ public class LoginController {
 	@Autowired
 	private ActivitiService activitiService;
 	
+	@Autowired
+	IdentityService identityService;
+	
 	@RequestMapping("/login")
 	public String login(HttpServletRequest request,HttpSession session){
 		
@@ -29,6 +36,8 @@ public class LoginController {
 			if(check){
 				User user = activitiService.getUserInfo(request);
 				session.setAttribute("user", user);
+				Group group = identityService.createGroupQuery().groupMember(user.getId()).singleResult();
+				session.setAttribute("group", group);
 				return "main";
 			}else {
 				return null;
@@ -43,15 +52,17 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/register")
-	public String register(HttpServletRequest request,Model model){		
+	public String register(HttpServletRequest request,Model model){	
+		List<Group> groups = activitiService.getGroups();
+		request.setAttribute("groups", groups);
 		return "sys/register";
 	}
 	
 	@RequestMapping("/signin")
 	public String register(HttpServletRequest request,Model model,
 			@RequestParam String userName,@RequestParam String password,@RequestParam String email,
-			@RequestParam String fristName,@RequestParam String lastName){
+			@RequestParam String firstName,@RequestParam String lastName){
 		activitiService.createUser(request);
-		return "sys/register";
+		return "sys/login";
 	}
 }

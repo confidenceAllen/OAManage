@@ -5,6 +5,12 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:spring-mybatis.xml</param-value>
   </context-param>
+  <context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>classpath*:/beans/beans-*.xml</param-value>
+</context-param>
+
+  
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -38,6 +44,22 @@
     <servlet-name>SpringMVC</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>ModelRestServlet</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<init-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring-mvc-modeler.xml</param-value>
+	</init-param>
+	<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModelRestServlet</servlet-name>
+		<url-pattern>/service/*</url-pattern>
+	</servlet-mapping>
+
+  
   <welcome-file-list>
     <welcome-file>/WEB-INF/jsp/sys/login.jsp</welcome-file>
   </welcome-file-list>

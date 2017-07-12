@@ -2,6 +2,7 @@ package com.cn.loan.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,6 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.activiti.engine.FormService;
+import org.activiti.engine.HistoryService;
+import org.activiti.engine.TaskService;
+import org.activiti.engine.form.FormProperty;
+import org.activiti.engine.history.HistoricTaskInstance;
+import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
@@ -31,6 +38,15 @@ public class ActivitiController {
 	@Autowired
 	private ActivitiService activitiService;
 	
+	@Autowired
+	TaskService taskService;
+	
+	@Autowired
+	FormService formService;
+	
+	@Autowired
+	HistoryService historyService;
+	
 	@RequestMapping("/main")
 	public String main(HttpServletRequest request,Model model){
 		
@@ -45,16 +61,79 @@ public class ActivitiController {
 		return "activiti/deploymentList";
 	}
 	
-	@RequestMapping("/startDeployment")
-	public String startDeployment(HttpServletRequest request,Model model){
-		
-		return "activiti/table";
+	@RequestMapping("/deletedeployment")
+	public String startDeployment(HttpServletRequest request,Model model,@RequestParam String deploymentId){
+		activitiService.deleteDeployment(deploymentId);
+		return "redirect:/activiti/list.do";
 	}
 	
-	@RequestMapping("/modeler")
-	public String table(HttpServletRequest request,Model model){
+	
+	@RequestMapping("/processInstanceDetail")
+	public String processInstance(HttpServletRequest request,Model model,@RequestParam String deploymentId){
+		ProcessDefinition processDefinition = activitiService.queryProcessDefinitionSingle(deploymentId);
+		List<FormProperty> formPropertielList = formService.getStartFormData(processDefinition.getId())
+												.getFormProperties();
+		request.setAttribute("formPropertielList", formPropertielList);
+		request.setAttribute("processDefinition", processDefinition);
+		return "activiti/processInstance";
+	}
+	
+	
+	@RequestMapping("/startProcessInstance")	
+	public String startProcessInstance(HttpServletRequest request,Model model){
 		
-		return "modeler";
+		Map<String, Object> variables = new HashMap<String, Object>();
+		String processDefinitionId = request.getParameter("processDefinitionId");
+		List<FormProperty> formPropertielList = formService.getStartFormData(processDefinitionId)
+				.getFormProperties();
+		for (FormProperty formProperty : formPropertielList) {
+			variables.put(formProperty.getId(), request.getParameter(formProperty.getId()));
+		}	
+		activitiService.startProcessInstance(processDefinitionId, variables);		
+		return "activiti/deploymentList";
+	}
+	
+	@RequestMapping("/queryTask")
+	public String queryTask(HttpServletRequest request,Model model,HttpSession session){
+		Group group = (Group) session.getAttribute("group");		
+		List<Task> tasks =  taskService.createTaskQuery().list();
+		/*List<Task> tasks =  taskService.createTaskQuery().taskCandidateGroup(group.getId()).list();*/
+		request.setAttribute("task", tasks);
+		return "activiti/taskList";
+	}
+	
+	@RequestMapping("/allTask")
+	public String allTask(HttpServletRequest request,Model model,HttpSession session){	
+		List<HistoricTaskInstance> historicTaskInstances =  historyService.createHistoricTaskInstanceQuery()
+				.orderByHistoricActivityInstanceId().asc().orderByTaskCreateTime().desc().list();	
+		request.setAttribute("historicTaskInstances", historicTaskInstances);
+		return "activiti/allTaskList";
+	}
+	
+	@RequestMapping("/startCompleteTask")
+	public String startCompleteTask(HttpServletRequest request,Model model,
+			@RequestParam String taskId,@RequestParam String processInstanceId){
+		List<FormProperty> formPropertielList = formService.getTaskFormData(taskId)
+				.getFormProperties();
+		request.setAttribute("formPropertielList", formPropertielList);
+		request.setAttribute("taskId", taskId);
+		request.setAttribute("processInstanceId", processInstanceId);
+		return "activiti/startCompleteTask";
+	}
+	
+	@RequestMapping("/completeTask")
+	public String completeTask(HttpServletRequest request,Model model,HttpSession session,
+			@RequestParam String taskId,@RequestParam String processInstanceId,@RequestParam String message){
+		Map<String, Object> variables = new HashMap<String, Object>();
+		List<FormProperty> formPropertielList = formService.getTaskFormData(taskId)
+				.getFormProperties();
+		for (FormProperty formProperty : formPropertielList) {
+			variables.put(formProperty.getId(), request.getParameter(formProperty.getId()));
+		}	
+		
+		taskService.addComment(taskId, processInstanceId, message);
+		taskService.complete(taskId, variables);
+		return "activiti/taskList";
 	}
 	
 	@RequestMapping("/viewShow")
@@ -65,9 +144,8 @@ public class ActivitiController {
             int len;
 			while ((len = imageStream.read(b, 0, 1024)) != -1) {
 			    response.getOutputStream().write(b, 0, len);
-}				
-		} catch (IOException e) {
-		
+			}				
+		} catch (IOException e) {		
 			e.printStackTrace();
 		}
 	}
@@ -88,57 +166,4 @@ public class ActivitiController {
 			e.printStackTrace();
 		}
 	}
-	
-	@RequestMapping("/processInstanceDetail")
-	public String processInstance(HttpServletRequest request,Model model,@RequestParam String deploymentId){
-		ProcessDefinition processDefinition = activitiService.queryProcessDefinitionSingle(deploymentId);
-		request.setAttribute("processDefinition", processDefinition);
-		return "activiti/processInstance";
-	}
-	
-	
-	@RequestMapping("/startProcessInstance")	
-	public String startProcessInstance(HttpServletRequest request,Model model,
-			@RequestParam String processDefinitionKey,
-			@RequestParam String username,
-			@RequestParam String reason,@RequestParam String dates){
-		
-		Map<String, Object> variables = new HashMap<String, Object>();
-		variables.put("name", username);
-		variables.put("原因", reason);
-		variables.put("dates", dates);		
-		activitiService.startProcessInstance(processDefinitionKey, variables);		
-		return "activiti/deploymentList";
-	}
-	
-	@RequestMapping("/queryTask")
-	public String queryTask(HttpServletRequest request,Model model){
-		List<Task> tasks = activitiService.queryTask();
-		request.setAttribute("task", tasks);
-		return "activiti/taskList";
-	}
-	
-	@RequestMapping("/startCompleteTask")
-	public String startCompleteTask(HttpServletRequest request,Model model){
-		return "activiti/startCompleteTask";
-	}
-	
-/*	@RequestMapping("/completeTask")
-	public String completeTask(HttpServletRequest request,Model model,HttpSession session,
-			@RequestParam String taskId,@RequestParam String message ,@RequestParam String processInstanceId){
-		User user = (User)session.getAttribute("user");
-		String userId =  user.getId();
-		activitiService.completeTaskByTaskId(taskId,userId,processInstanceId,message);
-		return "activiti/taskList";
-	}*/
-	
-	@RequestMapping("/completeTask")
-	public String completeTask(HttpServletRequest request,Model model,HttpSession session,
-			@RequestParam String taskId){
-		User user = (User)session.getAttribute("user");
-		String userId =  user.getId();
-		activitiService.completeTaskByTaskId(taskId);
-		return "activiti/taskList";
-	}
-	
 }

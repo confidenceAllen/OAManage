@@ -17,8 +17,8 @@ import org.activiti.engine.history.HistoricActivityInstance;
 import org.activiti.engine.history.HistoricActivityInstanceQuery;
 import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.history.HistoricTaskInstanceQuery;
+import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
-import org.activiti.engine.identity.UserQuery;
 import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.activiti.engine.impl.context.Context;
 import org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity;
@@ -33,6 +33,7 @@ import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.runtime.ProcessInstanceQuery;
 import org.activiti.engine.task.Task;
 import org.activiti.image.ProcessDiagramGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cn.loan.service.ActivitiService;
@@ -40,17 +41,41 @@ import com.cn.loan.service.ActivitiService;
 @Service("activitiService")
 public class ActivitiServiceImpl implements ActivitiService{
 
+	 @Autowired
+	 RepositoryService repositoryService;
+	 
+	 @Autowired
+	 IdentityService identityService;
+	 
+	 @Autowired
+	 TaskService taskService;
 	
 	ProcessEngine processEngine=ProcessEngines.getDefaultProcessEngine();
 	
 	public void createUser(HttpServletRequest request){
-		IdentityService inIdentityService = processEngine.getProcessEngineConfiguration().getIdentityService();
-		User user = inIdentityService.newUser(request.getParameter("userName"));
+		IdentityService identityService = processEngine.getProcessEngineConfiguration().getIdentityService();
+		User user = identityService.newUser(request.getParameter("userName"));
 		user.setPassword(request.getParameter("password"));
 		user.setEmail(request.getParameter("email"));
-		user.setFirstName(request.getParameter("fristName"));
+		user.setFirstName(request.getParameter("firstName"));
 		user.setLastName(request.getParameter("lastName"));	
-		inIdentityService.saveUser(user);
+		String groupId = request.getParameter("groupId");
+		identityService.setUserInfo(user.getId(), "groupId", groupId);
+		identityService.saveUser(user);
+		identityService.createMembership(user.getId(),groupId);
+	
+	}
+	
+	public List<Group> getGroups(){
+		List<Group> list = identityService.createGroupQuery().list();
+		return list;
+	}
+	
+	public void createGroup(HttpServletRequest request){
+		Group group = identityService.newGroup(request.getParameter("groupId"));
+		group.setName(request.getParameter("groupName"));
+		group.setType(request.getParameter("type"));
+		identityService.saveGroup(group);
 	}
 	
 	public boolean login(HttpServletRequest request){
@@ -72,8 +97,6 @@ public class ActivitiServiceImpl implements ActivitiService{
           
         DeploymentBuilder deploymentBuilder=repositoryService.createDeployment();//创建一个部署对象  
         deploymentBuilder.name(name);//添加部署的名称  
-        deploymentBuilder.addClasspathResource("diagrams/MyProcess.bpmn");//从classpath的资源加载，一次只能加载一个文件  
-        deploymentBuilder.addClasspathResource("diagrams/MyProcess.png");//从classpath的资源加载，一次只能加载一个文件  
           
         Deployment deployment=deploymentBuilder.deploy();//完成部署  
           
@@ -141,10 +164,11 @@ public class ActivitiServiceImpl implements ActivitiService{
 		System.out.println("删除的部署ID是："+deploymentId);
 	}
 
-	public void startProcessInstance(String processDefinitionKey,Map<String, Object> variables) {
+	/*开始流程实例*/
+	public void startProcessInstance(String processDefinitionId,Map<String, Object> variables) {
 		 ProcessInstance pi = processEngine.getRuntimeService()// 于正在执行的流程实例和执行对象相关的Service  
-	                .startProcessInstanceByKey(processDefinitionKey,variables);// 使用流程定义的key启动流程实例，key对应hellworld.bpmn文件中id的属性值，使用key值启动，默认是按照最新版本的流程定义启动  
-	
+	                .startProcessInstanceById(processDefinitionId,variables);// 使用流程定义的key启动流程实例，key对应hellworld.bpmn文件中id的属性值，使用key值启动，默认是按照最新版本的流程定义启动  
+		 
 		 System.out.println("流程实例ID:" + pi.getId());
 	        System.out.println("流程定义ID:" + pi.getProcessDefinitionId()); 
 	}
@@ -204,6 +228,7 @@ public class ActivitiServiceImpl implements ActivitiService{
 	public void completeTaskByTaskId(String taskId) {
         processEngine.getTaskService()//与正在执行的认为管理相关的Service  
                 .complete(taskId); 
+        
 /*        processEngine.getIdentityService().setAuthenticatedUserId(userId);
         processEngine.getTaskService().addComment(taskId, processInstanceId, message);*/
         System.out.println("完成任务:任务ID:"+taskId);  
@@ -246,7 +271,7 @@ public class ActivitiServiceImpl implements ActivitiService{
 	                .createProcessDefinitionQuery().deploymentId(deploymentId);  //根据部署ID查询
 		 ProcessDiagramGenerator diagramGenerator = processEngine.getProcessEngineConfiguration().getProcessDiagramGenerator();
 		 BpmnModel bpmnModel = processEngine.getRepositoryService().getBpmnModel(processDefinition.list().get(0).getId());
-		 InputStream imageStream = diagramGenerator.generateDiagram(bpmnModel,"png","宋体","宋体",null,1.0);
+		 InputStream imageStream = diagramGenerator.generateDiagram(bpmnModel,"png","宋体","宋体",null,null, 1.0);
 		 return imageStream;
 	}	
 	
@@ -273,7 +298,7 @@ public class ActivitiServiceImpl implements ActivitiService{
         }
 		 
         //中文乱码，设置字体就好了
-        InputStream imageStream = diagramGenerator.generateDiagram(bpmnModel, "png", highLightedActivitis,highLightedFlows,"宋体","宋体",null,1.0);
+        InputStream imageStream = diagramGenerator.generateDiagram(bpmnModel, "png", highLightedActivitis,highLightedFlows,"宋体","宋体",null,null, 1.0);
 		 return imageStream;
 	}
 	

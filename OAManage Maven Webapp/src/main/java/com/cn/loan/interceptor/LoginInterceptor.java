@@ -41,7 +41,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 		//获取请求的url  
         String url=request.getRequestURI();  
         //判断url是否是公开地址(实际使用时将公开地址配置到配置文件中)  
-        if(url.indexOf("login.do")>=0){  
+        if(url.indexOf("/sign/")>=0){  
             //如果要进行登录提交，放行  
             return true;  
         }  

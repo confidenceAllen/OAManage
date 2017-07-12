@@ -7,6 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.activiti.engine.history.HistoricActivityInstance;
+import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
@@ -15,6 +16,8 @@ import org.activiti.engine.task.Task;
 public interface ActivitiService {
 	
 	public void createUser(HttpServletRequest request);
+	
+	public List<Group> getGroups();
 	
 	public boolean login(HttpServletRequest request);
 	
@@ -38,7 +41,7 @@ public interface ActivitiService {
     /** 
      * 启动流程实例 
      */  
-	public void startProcessInstance(String processDefinitionKey,Map<String, Object> variables);
+	public void startProcessInstance(String processDefinitionId,Map<String, Object> variables);
     /**
      * 查询进行流程实例列表
      * */
