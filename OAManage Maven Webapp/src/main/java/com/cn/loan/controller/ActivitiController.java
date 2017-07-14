@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import org.activiti.engine.FormService;
 import org.activiti.engine.HistoryService;
+import org.activiti.engine.IdentityService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.form.FormProperty;
 import org.activiti.engine.history.HistoricTaskInstance;
@@ -38,15 +39,6 @@ public class ActivitiController {
 	@Autowired
 	private ActivitiService activitiService;
 	
-	@Autowired
-	TaskService taskService;
-	
-	@Autowired
-	FormService formService;
-	
-	@Autowired
-	HistoryService historyService;
-	
 	@RequestMapping("/main")
 	public String main(HttpServletRequest request,Model model){
 		
@@ -67,74 +59,6 @@ public class ActivitiController {
 		return "redirect:/activiti/list.do";
 	}
 	
-	
-	@RequestMapping("/processInstanceDetail")
-	public String processInstance(HttpServletRequest request,Model model,@RequestParam String deploymentId){
-		ProcessDefinition processDefinition = activitiService.queryProcessDefinitionSingle(deploymentId);
-		List<FormProperty> formPropertielList = formService.getStartFormData(processDefinition.getId())
-												.getFormProperties();
-		request.setAttribute("formPropertielList", formPropertielList);
-		request.setAttribute("processDefinition", processDefinition);
-		return "activiti/processInstance";
-	}
-	
-	
-	@RequestMapping("/startProcessInstance")	
-	public String startProcessInstance(HttpServletRequest request,Model model){
-		
-		Map<String, Object> variables = new HashMap<String, Object>();
-		String processDefinitionId = request.getParameter("processDefinitionId");
-		List<FormProperty> formPropertielList = formService.getStartFormData(processDefinitionId)
-				.getFormProperties();
-		for (FormProperty formProperty : formPropertielList) {
-			variables.put(formProperty.getId(), request.getParameter(formProperty.getId()));
-		}	
-		activitiService.startProcessInstance(processDefinitionId, variables);		
-		return "activiti/deploymentList";
-	}
-	
-	@RequestMapping("/queryTask")
-	public String queryTask(HttpServletRequest request,Model model,HttpSession session){
-		Group group = (Group) session.getAttribute("group");		
-		List<Task> tasks =  taskService.createTaskQuery().list();
-		/*List<Task> tasks =  taskService.createTaskQuery().taskCandidateGroup(group.getId()).list();*/
-		request.setAttribute("task", tasks);
-		return "activiti/taskList";
-	}
-	
-	@RequestMapping("/allTask")
-	public String allTask(HttpServletRequest request,Model model,HttpSession session){	
-		List<HistoricTaskInstance> historicTaskInstances =  historyService.createHistoricTaskInstanceQuery()
-				.orderByHistoricActivityInstanceId().asc().orderByTaskCreateTime().desc().list();	
-		request.setAttribute("historicTaskInstances", historicTaskInstances);
-		return "activiti/allTaskList";
-	}
-	
-	@RequestMapping("/startCompleteTask")
-	public String startCompleteTask(HttpServletRequest request,Model model,
-			@RequestParam String taskId,@RequestParam String processInstanceId){
-		List<FormProperty> formPropertielList = formService.getTaskFormData(taskId)
-				.getFormProperties();
-		request.setAttribute("formPropertielList", formPropertielList);
-		request.setAttribute("taskId", taskId);
-		request.setAttribute("processInstanceId", processInstanceId);
-		return "activiti/startCompleteTask";
-	}
-	
-	@RequestMapping("/completeTask")
-	public String completeTask(HttpServletRequest request,Model model,HttpSession session,
-			@RequestParam String taskId,@RequestParam String processInstanceId,@RequestParam String message){
-		Map<String, Object> variables = new HashMap<String, Object>();
-		List<FormProperty> formPropertielList = formService.getTaskFormData(taskId)
-				.getFormProperties();
-		for (FormProperty formProperty : formPropertielList) {
-			variables.put(formProperty.getId(), request.getParameter(formProperty.getId()));
-		}	
-		
-		taskService.addComment(taskId, processInstanceId, message);
-		taskService.complete(taskId, variables);
-		return "activiti/taskList";
-	}
 	
 	@RequestMapping("/viewShow")
 	public void viewShow(HttpServletRequest request,Model model,@RequestParam String deploymentId,HttpServletResponse response){		

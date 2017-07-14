@@ -5,10 +5,15 @@
 <html>
   <head>
   
-    <title>OA系统管理后台</title>
+    <title>OA系统管理后台--注册页面</title>
     
   </head>
   <body>
+  
+  	<h1 class="page-header">用户注册</h1>
+	<div class="row">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-8">
 	<form class="form-horizontal" action="signin.do" method="post">
 	
   	  <div class="form-group">
@@ -47,12 +52,16 @@
 	    </div>
 	  </div>
 	  
-	  <select class="form-control" name="groupId">
+	  <div class="form-group">
+	  <label class="col-sm-2 control-label">选择身份</label>
+	   <div class="col-sm-10">
+	  <select class="form-control success" name="groupId">
 	  	<c:forEach var="data" items="${groups }">
 		    <option value="${data.id }">${data.name }</option>
 	   	</c:forEach>
 		</select>
-	  
+		</div>
+	  </div>
 	
 	  <div class="form-group">
 	    <div class="col-sm-offset-2 col-sm-10">
@@ -60,4 +69,9 @@
 	    </div>
 	  </div>
 	</form>
+	</div>
+	<div class="col-sm-2"></div>
+	</div>
   </body>
+  
+  </html>

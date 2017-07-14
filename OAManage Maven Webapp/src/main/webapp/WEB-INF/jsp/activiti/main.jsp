@@ -24,4 +24,8 @@
     <h4></h4>
     <span class="text-muted">Something else</span>
   </div>
+  
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
 </div>

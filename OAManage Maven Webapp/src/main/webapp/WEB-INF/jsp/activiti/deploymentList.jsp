@@ -4,10 +4,10 @@
 <!DOCTYPE h1 PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <body>
-<h1 class="page-header">部署流程</h1>
-<h2 class="sub-header">Section title</h2>
+<h1 class="page-header">部署流程列表</h1>
+<h2 class="sub-header">可新增实例、控制所有实例。若删除部署，则删除部署后所有的实例（包括已完成）</h2>
 <div class="table-responsive">
-  <table class="table table-striped">
+  <table class="table table-striped table-bordered">
     <thead>
       <tr>
       	<th>#</th>
@@ -25,8 +25,8 @@
 		        <td>${datas.name }</td>
 		        <td><fmt:formatDate value='${datas.deploymentTime }' pattern='yyyy-MM-dd HH:mm:ss'/></td>
 		        <td><a href="javascript:window.open('viewShow.do?deploymentId=${datas.id }')">查看流程图流程</a>&nbsp;
-		        <a href="processInstanceDetail.do?deploymentId=${datas.id }">开始请假流程</a>
-		         <a href="deletedeployment.do?deploymentId=${datas.id }">删除部署流程</a></td>
+		        <a href="../processInstance/startProcessInstance.do?deploymentId=${datas.id }">开始${datas.name }</a>
+		         <a href="deletedeployment.do?deploymentId=${datas.id }">删除${datas.name }</a></td>
 		      </tr>
     	</c:forEach>
     </tbody>

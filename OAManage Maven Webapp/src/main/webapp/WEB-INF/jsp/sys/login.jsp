@@ -11,13 +11,13 @@
   <body>
 <div class="container">
       <form class="form-signin" action="<%=basePath %>sign/login.do">
-        <h2 class="form-signin-heading">登录我的1OA系统</h2>
+        <h2 class="form-signin-heading">登录我的系统</h2>
         <label  class="sr-only">UserName</label>
         <input  class="form-control" placeholder="UserName" required="" autofocus="" name="userName">
         <label for="inputPassword" class="sr-only">Password</label>
         <input id="inputPassword" class="form-control" placeholder="Password" required="" type="password" name="password">
         
-        <div class="dropdown">
+<!--         <div class="dropdown">
 		  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 		    		下拉选择角色
 		    <span class="caret"></span>
@@ -28,7 +28,7 @@
 		    <li><a href="#">副经理</a></li>
 		    <li><a href="#">总经理</a></li>
 		  </ul>
-		</div>
+		</div> -->
         
         <div class="checkbox">
           <label>
@@ -37,7 +37,7 @@
         </div>
         
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <a class="btn btn-lg btn-primary btn-block" href="sign/register.do">注册</a>
+        <a class="btn btn-lg btn-primary btn-block" href="../OAManage/sign/register.do">注册</a>
       </form>
     </div>
   </body>

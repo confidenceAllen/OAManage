@@ -18,7 +18,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../sign/login.do">工作流引擎DEMO</a>
+          <a class="navbar-brand" href="">工作流引擎DEMO</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -38,15 +38,16 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="../activiti/list.do" target='ifram_c'>流程部署<span class="sr-only">(current)</span></a></li>
-            <li><a href="../activiti/queryTask.do" target='ifram_c'>进行的任务</a></li>
-            <li><a href="../activiti/allTask.do" target='ifram_c'>全部任务</a></li>
-            <li><a href="../workflow/model/list.do" target='ifram_c'>Export</a></li>
+            <li class="active"><a href="../model/list.do" target='ifram_c'>模型设计</a></li>
+            <li><a href="../activiti/list.do" target='ifram_c'>流程部署</a></li>
+            <li><a href="../task/queryTask.do" target='ifram_c'>进行的任务</a></li>
+            <li><a href="../task/historicTaskList.do" target='ifram_c'>全部任务</a></li>
+           	<li><a href="../task/myGroupTask.do" target='ifram_c'>我的组待办任务</a></li>
+           	<li><a href="../task/myOwnerTask.do" target='ifram_c'>我的个人任务</a></li>
           </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
+          <ul class="nav nav-sidebar">           
+            <li><a href="../processInstance/processInstanceList.do" target='ifram_c'>查看流程实例</a></li>
+            <li><a href="../activemq/main.do" target='ifram_c'>消息中间件</a></li>
             <li><a href="">Another nav item</a></li>
             <li><a href="">More navigation</a></li>
           </ul>
@@ -65,6 +66,14 @@
   </body>
   
   <script type="text/javascript">
+  		$(document).ready(function () {
+				$('ul.nav > li').click(function (e) {
+				$('ul.nav > li').removeClass('active'); //所有的li 去除active
+				$(this).addClass('active'); //为当前的增加active
+				
+				});
+			
+			});
   </script>
   
 </html>

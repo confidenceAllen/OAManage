@@ -27,12 +27,14 @@ public class LoginController {
 	IdentityService identityService;
 	
 	@RequestMapping("/login")
-	public String login(HttpServletRequest request,HttpSession session){
+	public String login(HttpServletRequest request,HttpSession session,@RequestParam String userName,
+			@RequestParam String password){
 		
 		if(session.getAttribute("user")!=null){
 			return "main";
-		}else {			
-			Boolean check = activitiService.login(request);
+		}else {		
+			/*Boolean isUser = identityService.createUserQuery().userId(userName).memberOfGroup(groupId).equals(null);*/
+			Boolean check = identityService.checkPassword(userName, password);
 			if(check){
 				User user = activitiService.getUserInfo(request);
 				session.setAttribute("user", user);

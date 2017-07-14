@@ -11,7 +11,6 @@ import org.activiti.engine.IdentityService;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
-import org.activiti.engine.impl.persistence.entity.MembershipIdentityManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cn.loan.pojo.ActivitiUser;
 import com.cn.loan.service.ActivitiService;
-import com.mysql.fabric.xmlrpc.base.Array;
 
 @Controller
 @RequestMapping("/user")
@@ -72,7 +70,7 @@ public class UserController {
 	  }
 	  
 	  @RequestMapping("/createUser")
-	  public void createUser(HttpServletRequest request,
+	  public String createUser(HttpServletRequest request,
 			  @RequestParam String userName,@RequestParam String password,@RequestParam String email,
 			  @RequestParam String firstName,@RequestParam String lastName,@RequestParam String groupId){
 		  
@@ -84,18 +82,21 @@ public class UserController {
 		  identityService.saveUser(user);
 		  //创建group关联
 		  identityService.createMembership(user.getId(), groupId);
+		  return "redirect:/user/userList";
 	  }
 	  
 	  @RequestMapping("/createGroup")
-	  public void createGroup(HttpServletRequest request,@RequestParam String groupId,
+	  public String createGroup(HttpServletRequest request,@RequestParam String groupId,
 			  @RequestParam String groupName,@RequestParam String type){
 		  try {
 			  Group group = identityService.newGroup(groupId);			  
 			  group.setName(groupName);
 			  group.setType(type);
 			  identityService.saveGroup(group);
+			  return "redirect:/user/groupList";
 			} catch (Exception e) {
 				logger.debug("groupId--已存在--不能重复");
+				return null;
 			}
 		
 	  }

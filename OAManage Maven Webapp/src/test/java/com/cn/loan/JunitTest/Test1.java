@@ -41,13 +41,8 @@ public class Test1 {
      
      @Test
 	public void ccc(){
-    	 Map<String, String> variables = new HashMap<String, String>();
-    	 variables.put("dates", "1");
-    	 processEngine.getFormService().submitStartFormData("请假:4:20004", variables);
-    	List<FormProperty> formProperties = processEngine.getFormService().getTaskFormData("17517").getFormProperties();
-    	for (FormProperty formProperty : formProperties) {
-			System.out.println(formProperty.getName()+"-----"+formProperty.getValue());
-		}
+    	List<Task> tasks = processEngine.getTaskService().createTaskQuery().list();
+    	System.out.println(tasks.get(0));
 	}
      
      

@@ -15,7 +15,7 @@
   }, {
     "name" : "overrideidpackage",
     "properties" : [ {
-      "id" : "overrideid",
+      "id" : "overrideid",	
       "type" : "String",
       "title" : "ID",
       "value" : "",
@@ -489,7 +489,7 @@
     "properties" : [ {
       "id" : "timercycledefinition",
       "type" : "String",
-      "title" : "时间周期 (e.g. R3/PT10H)",
+      "title" : "时间周期 (e.g. R3/PT10H) 表示重复3次，每次间隔10小时",
       "value" : "",
       "description" : "定义ISO-8601时间周期.",
       "popular" : true
@@ -499,7 +499,7 @@
     "properties" : [ {
       "id" : "timerdatedefinition",
       "type" : "String",
-      "title" : "时间周期(ISO-8601格式标准)",
+      "title" : "触发时间日期(ISO-8601格式标准 2017-03-12T12:12:23 表示在2017年03 月12日 12:12:23触发)",
       "value" : "",
       "description" : "定义(ISO-8601格式标准)的定时器.",
       "popular" : true
@@ -509,7 +509,7 @@
     "properties" : [ {
       "id" : "timerdurationdefinition",
       "type" : "String",
-      "title" : "持续的时间 (e.g. PT5M)",
+      "title" : "持续的时间 (e.g. PT5M) P10D 表示10天以后触发",
       "value" : "",
       "description" : "定义(ISO-8601)持续的定时器",
       "popular" : true

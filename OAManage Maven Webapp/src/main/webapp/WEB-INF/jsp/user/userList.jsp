@@ -5,10 +5,9 @@
 <html>
 <body>
 <h1 class="page-header">用户列表</h1>
-<h2 class="sub-header">Section title</h2>
 <div style="text-align: right"><a class="btn btn-success" data-toggle="modal" data-target="#gridSystemModal">创建</a></div>
 <div class="table-responsive">
-  <table class="table table-striped">
+  <table class="table table-striped table-bordered">
     <thead>
       <tr>
       	<th>#</th>
@@ -34,7 +33,7 @@
 <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" style="display: none;">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-      <form action="create.do">
+      <form action="create.do" class="form-horizontal">
       	
      	<!-- 头部 -->
         <div class="modal-header">

@@ -40,15 +40,6 @@ import com.cn.loan.service.ActivitiService;
 
 @Service("activitiService")
 public class ActivitiServiceImpl implements ActivitiService{
-
-	 @Autowired
-	 RepositoryService repositoryService;
-	 
-	 @Autowired
-	 IdentityService identityService;
-	 
-	 @Autowired
-	 TaskService taskService;
 	
 	ProcessEngine processEngine=ProcessEngines.getDefaultProcessEngine();
 	
@@ -67,15 +58,15 @@ public class ActivitiServiceImpl implements ActivitiService{
 	}
 	
 	public List<Group> getGroups(){
-		List<Group> list = identityService.createGroupQuery().list();
+		List<Group> list = processEngine.getIdentityService().createGroupQuery().list();
 		return list;
 	}
 	
 	public void createGroup(HttpServletRequest request){
-		Group group = identityService.newGroup(request.getParameter("groupId"));
+		Group group = processEngine.getIdentityService().newGroup(request.getParameter("groupId"));
 		group.setName(request.getParameter("groupName"));
 		group.setType(request.getParameter("type"));
-		identityService.saveGroup(group);
+		processEngine.getIdentityService().saveGroup(group);
 	}
 	
 	public boolean login(HttpServletRequest request){

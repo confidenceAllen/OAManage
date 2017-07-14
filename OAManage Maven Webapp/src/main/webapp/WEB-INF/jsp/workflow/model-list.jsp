@@ -6,18 +6,18 @@
 <html lang="en">
 <head>
 
-	<title>流程列表</title>
+	<title>model列表</title>
 	
     <script type="text/javascript">
     </script>
 </head>
 <body>
-<h1 class="page-header">Dashboard</h1>
-<h2 class="sub-header">Section title</h2>
+<h1 class="page-header">model列表</h1>
+<h2 class="sub-header">原型图在这个地方产生</h2>
 
 <div style="text-align: right"><a class="btn btn-success" data-toggle="modal" data-target="#gridSystemModal">创建</a></div>
 <div class="table-responsive">
-  <table class="table table-striped">
+  <table class="table table-striped table-bordered">
     <thead>
       <tr>
       	<th>ID</th>
@@ -39,8 +39,8 @@
 					<td>${model.name}</td>
 					<td>${model.version}</td>
 					<th>${model.category}</th>
-					<td>${model.createTime}</td>
-					<td>${model.lastUpdateTime}</td>
+					<td><fmt:formatDate value='${model.createTime}' pattern='yyyy-MM-dd HH:mm:ss'/></td>
+					<td><fmt:formatDate value='${model.lastUpdateTime}' pattern='yyyy-MM-dd HH:mm:ss'/></td>
 					<td>${model.metaInfo}</td>
 					<td>
 						<a href="modeler.do?modelId=${model.id}" target="_blank">编辑</a>
@@ -59,7 +59,7 @@
 	<div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" style="display: none;">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-      <form action="create.do" target="_blank" method="post">
+      <form class="form-horizontal" action="create.do" target="_blank" method="post">
       	
      	<!-- 头部 -->
         <div class="modal-header">

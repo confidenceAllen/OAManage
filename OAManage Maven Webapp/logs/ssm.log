@@ -850,4 +850,110 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Query was 
  [INFO] [2017-07-11 16:06:27][org.activiti.engine.ProcessEngines]initialised process engine default
  [INFO] [2017-07-11 16:06:27][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.请假.png
  [INFO] [2017-07-11 16:06:27][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 请假流程.bpmn20.xml
+ [INFO] [2017-07-13 13:46:35][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-13 13:46:35][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-13 13:46:36][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-13 13:46:38][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-13 13:46:38][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-13 13:46:47][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-13 13:46:47][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-13 13:46:47][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-13 13:46:49][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-13 13:46:49][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-13 13:47:11][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-13 13:47:11][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-13 13:47:11][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-13 13:47:13][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-13 13:47:13][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-13 15:09:55][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-13 15:09:55][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-13 15:09:55][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-13 15:09:58][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-13 15:09:58][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-13 15:09:58][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 借款.borrowMoney.png
+ [INFO] [2017-07-13 15:09:58][org.activiti.engine.impl.bpmn.deployer.BpmnDeployer]Processing resource 借款.bpmn20.xml
+ [INFO] [2017-07-14 13:45:36][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-14 13:45:36][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-14 13:45:36][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-14 13:45:39][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-14 13:45:39][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-14 13:50:07][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-14 13:50:07][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-14 13:50:07][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-14 13:50:09][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-14 13:50:09][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-14 14:23:53][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-14 14:23:53][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-14 14:23:53][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-14 14:23:55][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-14 14:23:55][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-14 14:24:26][org.activiti.engine.ProcessEngines]Initializing process engine using configuration 'file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml'
+ [INFO] [2017-07-14 14:24:26][org.activiti.engine.ProcessEngines]initializing process engine for resource file:/C:/Users/54200/git/OAManage/OAManage%20Maven%20Webapp/target/classes/activiti.cfg.xml
+ [INFO] [2017-07-14 14:24:26][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from resource loaded through InputStream
+ [INFO] [2017-07-14 14:24:28][org.activiti.engine.impl.ProcessEngineImpl]ProcessEngine default created
+ [INFO] [2017-07-14 14:24:28][org.activiti.engine.ProcessEngines]initialised process engine default
+ [INFO] [2017-07-17 14:15:25][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:19:14][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:19:51][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:20:31][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:22:09][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:22:26][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:22:36][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:23:22][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:24:12][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:25:41][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:25:58][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.net.SocketException: Connection reset, attempting to automatically reconnect
+ [INFO] [2017-07-17 14:26:39][org.apache.activemq.transport.failover.FailoverTransport]Successfully reconnected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:27:03][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:27:14][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:28:54][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:32:14][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:33:17][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:33:18][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:33:39][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:34:06][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:34:06][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:34:33][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:38:33][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:39:05][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:39:09][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:40:34][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:40:35][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:41:00][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:41:02][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:42:15][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:42:23][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:42:23][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:43:54][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:43:55][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:44:11][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:44:11][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:54:12][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:54:16][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:54:32][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:55:55][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:55:55][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:56:29][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 14:56:29][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 14:56:44][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:57:01][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 14:59:31][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 15:01:11][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 15:01:30][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 15:02:02][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 15:02:03][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 15:11:21][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [INFO] [2017-07-17 15:13:01][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 15:13:04][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 15:16:25][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 15:16:25][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 15:16:48][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 15:16:48][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 15:23:34][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 15:23:34][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 15:24:01][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 15:24:01][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 15:24:37][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+ [WARN] [2017-07-17 15:24:37][org.apache.activemq.transport.failover.FailoverTransport]Transport (tcp://127.0.0.1:61616) failed, reason:  java.io.EOFException, not attempting to automatically reconnect
+ [INFO] [2017-07-17 16:41:54][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
  

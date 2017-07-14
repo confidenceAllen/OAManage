@@ -1,13 +1,13 @@
+
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@include file="/common.jsp"%>
 <!DOCTYPE h1 PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <body>
-<h1 class="page-header">进行任务</h1>
-<h2 class="sub-header">Section title</h2>
-${tasks }
+<h1 class="page-header">我的个人任务</h1>
+<h2 class="sub-header">被指派的特定任务，此处是根据owner属性查询</h2>
 <div class="table-responsive">
-  <table class="table table-striped">
+  <table class="table table-striped table-bordered">
     <thead>
       <tr>
       	<th>#</th>
@@ -20,7 +20,7 @@ ${tasks }
       </tr>
     </thead>
     <tbody>
-    	<c:forEach var="datas" items="${historicTaskInstances }" varStatus="varStatus">
+    	<c:forEach var="datas" items="${tasks }" varStatus="varStatus">
     		 <tr>
     		 	<td>${varStatus.index + 1}</td>
 		        <td>${datas.id }</td>
@@ -29,7 +29,7 @@ ${tasks }
 		        <td>${datas.assignee }</td>
 		        <td><fmt:formatDate value='${datas.createTime }' pattern='yyyy-MM-dd HH:mm:ss'/></td>
 		        <td><a href="startCompleteTask.do?taskId=${datas.id }&processInstanceId=${datas.processInstanceId }">完成任务</a>&nbsp;
-		        <a href="javascript:window.open('viewShowHight.do?taskId=${datas.id }&processDefinitionId=${datas.processDefinitionId}&processInstanceId=${datas.processInstanceId }')">查看流程图</a>&nbsp;
+		        <a href="javascript:window.open('../activiti/viewShowHight.do?taskId=${datas.id }&processDefinitionId=${datas.processDefinitionId}&processInstanceId=${datas.processInstanceId }')">查看流程图</a>&nbsp;
 		        </td>
 		      </tr>
     	</c:forEach>

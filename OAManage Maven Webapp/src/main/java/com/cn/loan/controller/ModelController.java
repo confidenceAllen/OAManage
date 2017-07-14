@@ -36,7 +36,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 /**
  * 流程模型控制器
  *
- * @author henryyan
  */
 @Controller
 @RequestMapping("/model")
@@ -122,7 +121,9 @@ public class ModelController {
             bpmnBytes = new BpmnXMLConverter().convertToXML(model);
             
             String processName = modelData.getName() + ".bpmn20.xml";
-            Deployment deployment = repositoryService.createDeployment().name(modelData.getName()).category(category).addString(processName, new String(bpmnBytes)).deploy();            
+            repositoryService.createDeployment()
+            		.name(modelData.getName()).category(category)
+            		.addString(processName, new String(bpmnBytes)).deploy();            
         } catch (Exception e) {
             logger.error("根据模型部署流程失败：modelId={}", modelId, e);
         }
