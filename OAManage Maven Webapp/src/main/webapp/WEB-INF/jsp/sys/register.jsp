@@ -14,7 +14,7 @@
 	<div class="row">
 	<div class="col-sm-2"></div>
 	<div class="col-sm-8">
-	<form class="form-horizontal" action="signin.do" method="post">
+	<form class="form-horizontal" action="signin.do" method="post" enctype="multipart/form-data">
 	
   	  <div class="form-group">
 	    <label class="col-sm-2 control-label">UserName</label>
@@ -61,6 +61,12 @@
 	   	</c:forEach>
 		</select>
 		</div>
+	  </div>
+	  
+    <div class="form-group">
+		    <label class="col-sm-2 control-label" for="exampleInputFile">File input</label>
+		    <input type="file"  name="file">
+		    <a class="help-block">上传</a>
 	  </div>
 	
 	  <div class="form-group">

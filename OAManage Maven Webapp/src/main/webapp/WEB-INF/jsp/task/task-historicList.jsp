@@ -6,7 +6,7 @@
 <h1 class="page-header">全部任务</h1>
 <h2 class="sub-header">全部的历史task,只有task。不包括流程线</h2>
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-bordered table-hover">
     <thead>
       <tr>
       	<th>#</th>
@@ -35,10 +35,35 @@
     </tbody>
   </table>
 </div>
-
+    
+<ul id='paper'></ul>
 </body>
 <script type="text/javascript">
-	
+$(function(){
+        var element = $('#paper');
+        options = {
+            bootstrapMajorVersion:3, //对应的bootstrap版本
+            currentPage: ${pager.currentPage }, //当前页数，这里是用的EL表达式，获取从后台传过来的值
+            numberOfPages: 5 , //每页页数
+            totalPages: ${pager.totalPages }, //总页数，这里是用的EL表达式，获取从后台传过来的值
+            shouldShowPage:true,//是否显示该按钮
+            pageUrl: function(type, page, current){                
+            	return "${page.url }?page=" + page;  
+            } ,
+            //点击事件
+            onPageClicked: function (event, originalEvent, type, page) {
+	            if(${pager.currentPage }==1&&${pager.currentPage }==page){
+	            	alert("这已经是首页!");
+	            	return false;
+	            }
+	            if(${pager.currentPage }==${pager.totalPages }&&${pager.currentPage }==page){
+	            	alert("这已经是尾页!");
+	            	return false;
+	            }
+               
+            }
+        };
+        element.bootstrapPaginator(options);
+});
 </script>
-	
 </html>

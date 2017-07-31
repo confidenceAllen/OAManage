@@ -1,31 +1,54 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@include file="/common.jsp"%>
 
+<!DOCTYPE h1 PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
 <h1 class="page-header">Dashboard</h1>
 
-<div class="row">
-  <div class="col-xs-6 col-sm-3 placeholder">
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive" alt="Generic placeholder thumbnail" width="200" height="200">
-    <h4>进入工作流 <a class="btn btn-default" href="list.do" role="button">In »</a></h4>             
-    <span class="text-muted">Something else</span>
-  </div>
-  <div class="col-xs-6 col-sm-3 placeholder">
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive" alt="Generic placeholder thumbnail" width="200" height="200">
-    <h4 class="danger">查看流程 <a class="btn btn-default" href="#" role="button">In »</a></h4>
-    <span class="text-muted">Something else</span>
-  </div>
-  <div class="col-xs-6 col-sm-3 placeholder">
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive" alt="Generic placeholder thumbnail" width="200" height="200">
-   	<h4 class="danger">查看进行的任务 <a class="btn btn-default" href="queryTask.do " role="button">In »</a></h4>
-    <span class="text-muted">Something else</span>
-  </div>
-  <div class="col-xs-6 col-sm-3 placeholder">
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive" alt="Generic placeholder thumbnail" width="200" height="200">
-    <h4></h4>
-    <span class="text-muted">Something else</span>
-  </div>
-  
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-</div>
+<div class="container">
+
+      <div class="jumbotron">
+        <h1>欢迎登录本系统</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+
+    </div> 
+
+</body>
+<script type="text/javascript">
+
+	$('#datetimepicker').datetimepicker({
+			
+		})
+</script>
+</html>

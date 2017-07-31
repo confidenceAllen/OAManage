@@ -31,7 +31,6 @@ public class TopicSender {
 	 */
 	public void send(String topicName,final String message){
 		jmsTemplate.send(topicName, new MessageCreator() {
-			@Override
 			public Message createMessage(Session session) throws JMSException {
 				return session.createTextMessage(message);
 			}

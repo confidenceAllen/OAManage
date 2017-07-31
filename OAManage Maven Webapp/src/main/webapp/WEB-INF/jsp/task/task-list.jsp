@@ -8,7 +8,7 @@
 <h2 class="sub-header">进行中的任务，区别在于查询出所有任务，不包括历史任务</h2>
 
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-bordered table-hover">
     <thead>
       <tr>
       	<th>#</th>

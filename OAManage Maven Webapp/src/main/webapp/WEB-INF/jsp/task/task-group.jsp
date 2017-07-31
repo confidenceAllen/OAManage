@@ -7,7 +7,7 @@
 <h1 class="page-header">我的小组任务</h1>
 <h2 class="sub-header">我的组任务，根据管理groupId查询的组别任务</h2>
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-bordered table-hover">
     <thead>
       <tr>
       	<th>#</th>

@@ -30,7 +30,7 @@ public class AppProducer {
 		
 		MessageProducer messageProducer = session.createProducer(destination);
 		
-		TextMessage textMessage = session.createTextMessage("我发出的消息11");
+		TextMessage textMessage = session.createTextMessage("发顺丰");
 		
 		messageProducer.send(textMessage);
 		

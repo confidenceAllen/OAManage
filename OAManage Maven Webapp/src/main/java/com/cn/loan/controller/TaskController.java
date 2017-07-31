@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.cn.loan.pojo.Pager;
 
 @RequestMapping("/task")
 @Controller
@@ -72,6 +73,13 @@ public class TaskController {
 		List<HistoricTaskInstance> historicTaskInstances =  historyService.createHistoricTaskInstanceQuery()
 				.orderByHistoricActivityInstanceId().asc().orderByTaskCreateTime().desc().list();	
 		request.setAttribute("historicTaskInstances", historicTaskInstances);
+		System.out.println(request.getServletPath());
+		String pageNum = request.getParameter("page");
+		int currentPage = "".equals(pageNum)||pageNum==null?1:Integer.valueOf(pageNum);
+		Pager pager = new Pager(100, 5);
+		pager.setCurrentPage(currentPage);
+		pager.setUrl(request.getServletPath());
+		request.setAttribute("pager", pager);
 		return "task/task-historicList";
 	}
 	

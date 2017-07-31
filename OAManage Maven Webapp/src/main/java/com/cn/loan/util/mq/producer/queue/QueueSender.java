@@ -30,7 +30,6 @@ public class QueueSender {
 	 */
 	public void send(String queueName,final String message){
 			jmsTemplate.send(queueName, new MessageCreator() {
-			@Override
 			public Message createMessage(Session session) throws JMSException {
 				return session.createTextMessage(message);
 			}

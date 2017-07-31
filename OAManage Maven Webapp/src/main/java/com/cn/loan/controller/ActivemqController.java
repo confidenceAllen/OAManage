@@ -26,7 +26,6 @@ public class ActivemqController {
 	
 	@RequestMapping("/main")
 	public String showContext(){
-		
 		return "activemq";
 	}
 	

@@ -18,7 +18,6 @@ import org.springframework.stereotype.Component;
 public class TopicReceiver1 implements MessageListener{
 
 
-	@Override
 	public void onMessage(Message message) {
 		try {
 			System.out.println("TopicReceiver1接收到消息:"+((TextMessage)message).getText());

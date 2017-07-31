@@ -7,7 +7,7 @@
 <h1 class="page-header">部署流程列表</h1>
 <h2 class="sub-header">可新增实例、控制所有实例。若删除部署，则删除部署后所有的实例（包括已完成）</h2>
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-bordered table-hover">
     <thead>
       <tr>
       	<th>#</th>

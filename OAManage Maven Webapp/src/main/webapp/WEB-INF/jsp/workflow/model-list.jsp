@@ -17,7 +17,7 @@
 
 <div style="text-align: right"><a class="btn btn-success" data-toggle="modal" data-target="#gridSystemModal">创建</a></div>
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-bordered table-hover">
     <thead>
       <tr>
       	<th>ID</th>

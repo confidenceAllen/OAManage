@@ -8,7 +8,22 @@
   <name>OA Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <build>
-    <finalName>OA</finalName>
+		<plugins>
+			<!-- compiler插件, 设定JDK版本 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding> 
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+		</plugins>
+		<defaultGoal>compile</defaultGoal>
+		<finalName>OAManage</finalName>
   </build>
   
       <properties>  
@@ -19,16 +34,57 @@
             <!-- log4j日志文件管理包版本 -->  
             <slf4j.version>1.7.7</slf4j.version>  
             <log4j.version>1.2.17</log4j.version>  
+            <shiro.version>1.2.2</shiro.version>
+            <druid.version>0.2.23</druid.version>
+            <mysql.version>5.1.30</mysql.version>
             <activiti-version>5.22.0</activiti-version>
+       		<!-- JDK版本 -->
+			<jdk.version>1.7</jdk.version>
+			<!-- 强制编码 -->
+			<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         </properties>  
       
         <dependencies>  
+        <!-- shrio 权限控制 begin-->
+		    <dependency>
+		        <groupId>org.apache.shiro</groupId>
+		        <artifactId>shiro-core</artifactId>
+		        <version>${shiro.version}</version>
+		    </dependency>
+		    
+		    <dependency>  
+			    <groupId>com.alibaba</groupId>  
+			    <artifactId>druid</artifactId>  
+			    <version>${druid.version}</version>  
+			</dependency>   
+		    
+	    		<dependency>
+					<groupId>org.apache.shiro</groupId>
+					<artifactId>shiro-web</artifactId>
+					<version>${shiro.version}</version>
+					<type>jar</type>
+					<scope>compile</scope>
+				</dependency>
+		<!-- shrio 权限控制 end -->
         
+        <!-- activemq 中间件 -->
             <dependency>  
                 <groupId>org.apache.activemq</groupId>  
                 <artifactId>activemq-all</artifactId>  
                 <version>5.14.4</version>  
             </dependency>  
+            
+        <!-- quartz定时任务 -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz-jobs</artifactId>
+            <version>2.2.1</version>
+        </dependency>
         
         <dependency>
 	      <groupId>org.activiti</groupId>
@@ -131,7 +187,7 @@
             <dependency>  
                 <groupId>mysql</groupId>  
                 <artifactId>mysql-connector-java</artifactId>  
-                <version>5.1.30</version>  
+                <version>${mysql.version}</version>  
             </dependency>  
             <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->  
             <dependency>  
@@ -199,4 +255,7 @@
               
               
         </dependencies>  
+        
+
+	
 </project>

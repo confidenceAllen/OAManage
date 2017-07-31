@@ -6,7 +6,7 @@
 <h1 class="page-header">留言记录</h1>
 <h2 class="sub-header">一个流程的留言记录</h2>
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-bordered table-hover">
     <thead>
       <tr>
       	<th>#</th>

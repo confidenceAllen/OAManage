@@ -6,7 +6,7 @@
 <body>
 <h1 class="page-header">流程实例</h1>
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-bordered table-hover">
     <thead>
       <tr>
       	<th>#</th>

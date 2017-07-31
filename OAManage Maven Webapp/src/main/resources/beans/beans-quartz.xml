@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!-- 要执行任务的任务类。 -->
+    <bean id="QuartzJob" class="com.cn.loan.job.QuartzJob"></bean>
+    
+     <!-- 将需要执行的定时任务注入JOB中。 -->
+    <bean id="myJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="QuartzJob"></property>
+        <!-- 任务类中需要执行的方法 -->
+        <property name="targetMethod" value="doSomething"></property>
+        <!-- 上一次未执行完成的，要等待有再执行。 -->
+        <property name="concurrent" value="false"></property>
+    </bean>
+    
+    <!-- 2.1：定义触发器的bean，定义一个Simple的Trigger，一个触发器只能和一个任务进行绑定 -->
+    <!-- <bean name="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		        指定Trigger的名称
+		        <property name="name" value="hw_trigger"/>
+		        指定Trigger的名称
+		        <property name="group" value="hw_trigger_group"/>
+		        指定Tirgger绑定的Job
+		        <property name="jobDetail" ref="hwJob"/>
+		        指定Trigger的延迟时间 1s后运行
+		        <property name="startDelay" value="1000"/>
+		        指定Trigger的重复间隔  5s
+		        <property name="repeatInterval" value="5000"/>
+		        指定Trigger的重复次数
+		        <property name="repeatCount" value="5"/>
+	    </bean> -->
+    
+    <bean id="myTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <!-- 指定Tirgger绑定的Job -->
+        <property name="jobDetail" ref="myJob"/>
+        <!-- 指定Cron 的表达式 ，当前是每隔5s运行一次 -->
+        <property name="cronExpression" value="0/10 34 * * * ?" />
+    </bean>
+    
+    <bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" autowire="no" lazy-init="false">
+        <property name="triggers">
+            <list>
+                <ref bean="myTrigger"></ref>
+            </list>
+        </property>
+    </bean>
+    
+</beans>

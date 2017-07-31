@@ -7,7 +7,7 @@
 <h1 class="page-header">我的个人任务</h1>
 <h2 class="sub-header">被指派的特定任务，此处是根据owner属性查询</h2>
 <div class="table-responsive">
-  <table class="table table-striped table-bordered">
+  <table class="table table-bordered table-hover">
     <thead>
       <tr>
       	<th>#</th>
