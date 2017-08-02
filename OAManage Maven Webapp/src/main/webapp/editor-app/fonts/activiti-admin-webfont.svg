@@ -4,7 +4,11 @@
 <metadata></metadata>
 <defs>
 <font id="activitimodelerregular" horiz-adv-x="2048" >
-<font-face units-per-em="2048" ascent="1638" descent="-410" />
+<font-face units-per-em="2048" ascent="1638" descent="-410" >
+    <font-face-src>  
+        <font-face-name name="Super Sans Bold"/>  
+    </font-face-src>  
+</font-face>  
 <missing-glyph horiz-adv-x="500" />
 <glyph horiz-adv-x="0" />
 <glyph unicode="&#xd;" />

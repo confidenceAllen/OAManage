@@ -4,7 +4,11 @@
 <metadata></metadata>
 <defs>
 <font id="glyphicons_halflingsregular" horiz-adv-x="1200" >
-<font-face units-per-em="1200" ascent="960" descent="-240" />
+<font-face units-per-em="1200" ascent="960" descent="-240" >
+    <font-face-src>  
+        <font-face-name name="Super Sans Bold"/>  
+    </font-face-src>  
+</font-face>  
 <missing-glyph horiz-adv-x="500" />
 <glyph />
 <glyph />
