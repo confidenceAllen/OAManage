@@ -1,12 +1,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+    <!--groupId反写的公司网址+项目名-->
   <groupId>OA</groupId>
+    <!--artifactId 项目名+ 模块名-->
   <artifactId>OA</artifactId>
+    <!--默认是jar
+        war zip pom-->
   <packaging>war</packaging>
+    <!--第一个0表示大版本
+        第二个表示分支版本
+        第三个0表示小版本
+        0.0.1
+        snapshot快照
+        alpha   内部测试
+        beta    公测
+        release 稳定
+        GA      正式发布版本
+        -->
   <version>0.0.1-SNAPSHOT</version>
+    <!--项目描述名-->
   <name>OA Maven Webapp</name>
+    <!--项目地址-->
   <url>http://maven.apache.org</url>
+    <!--项目描述-->
+    <description>工作流+shrio权限控制</description>
+
   <build>
 		<plugins>
 			<!-- compiler插件, 设定JDK版本 -->
@@ -106,6 +125,7 @@
 		    <artifactId>activiti-diagram-rest</artifactId>
 		    <version>${activiti-version}</version>
 		</dependency>
+
             <dependency>  
             <!-- 4.12必jiamin-->
                 <groupId>junit</groupId>  
@@ -113,14 +133,14 @@
                 <version>4.12</version>  
                 <!-- 表示开发的时候引入，发布的时候不会加载此包 -->  
                 <scope>test</scope>  
-            </dependency>  
+            </dependency>
+
             <!-- spring核心包 -->  
             <dependency>  
                 <groupId>org.springframework</groupId>  
                 <artifactId>spring-core</artifactId>  
                 <version>${spring.version}</version>  
-            </dependency>  
-      
+            </dependency>
             <dependency>  
                 <groupId>org.springframework</groupId>  
                 <artifactId>spring-web</artifactId>  
@@ -164,7 +184,8 @@
                 <groupId>org.springframework</groupId>  
                 <artifactId>spring-test</artifactId>  
                 <version>${spring.version}</version>  
-            </dependency>  
+            </dependency>
+
             <!-- mybatis核心包 -->  
             <dependency>  
                 <groupId>org.mybatis</groupId>  
