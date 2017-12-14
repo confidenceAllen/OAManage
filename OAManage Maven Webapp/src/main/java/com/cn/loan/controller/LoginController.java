@@ -27,7 +27,7 @@ public class LoginController {
 	
 	@Autowired
 	private ActivitiService activitiService;
-	
+
 	@Autowired
 	IdentityService identityService;
 	
